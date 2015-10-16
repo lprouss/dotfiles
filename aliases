@@ -29,6 +29,7 @@ alias wget="wget -c"
 ##----------------------------------------------------------------------------##
 alias ll='ls -lh'
 alias la='ls -A'
+alias lla='ls -lhA'
 alias sl='ls'
 
 alias ~="cd ~"

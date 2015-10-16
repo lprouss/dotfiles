@@ -1,0 +1,81 @@
+!!----------------------------------------------------------------------------!!
+!! Xft (font) settings
+!!----------------------------------------------------------------------------!!
+Xft.autohint:               0
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+Xft.lcdfilter:              lcddefault
+
+!!----------------------------------------------------------------------------!!
+!! mouse cursor settings
+!!----------------------------------------------------------------------------!!
+Xcursor.theme:              DMZ-White
+Xcursor.size:               22
+
+!!----------------------------------------------------------------------------!!
+!! include terminal colorscheme in external file
+!!----------------------------------------------------------------------------!!
+! Solarized Dark colorscheme
+#include </home/elpe/.Xresources.d/solarizedDark>
+
+!!----------------------------------------------------------------------------!!
+!! URXVT terminal settings
+!!----------------------------------------------------------------------------!!
+! general settings
+!URxvt.termName:            rxvt-unicode
+!URxvt.geometry:            90x24
+URxvt*loginShell:           false
+URxvt*saveLines:            2000
+URxvt*urgentOnBell:         false
+URxvt*pastableTabs:         true
+URxvt*tripleclickwords:     true
+URxvt*hold:                 false
+URxvt*fading:               0
+URxvt*transparent:          false
+URxvt*skipBuiltinGlyphs:    true
+
+! scroll settings
+URxvt*scrollstyle:          plain
+URxvt*scrollBar:            false
+URxvt*scrollBar_right:      true
+URxvt*thickness:            4 
+URxvt*scrollTtyKeypress:    true
+URxvt*scrollTtyOutput:      true
+URxvt*scrollWithBuffer:     false
+URxvt*jumpScroll:           true
+URxvt*skipScroll:           false
+URxvt*mouseWheelScrollPage: false
+
+! fonts settings
+URxvt*buffered:             true
+URxvt*depth:                32
+URxvt*font:                 xft:inconsolata:size=10
+URxvt*boldFont:             xft:inconsolata:bold:size=10
+URxvt*allow_bold:           true
+URxvt*lineSpace:            0
+URxvt*letterSpace:          -1
+
+! borders settings
+!URxvt*borderless:          false
+!URxvt*internalBorder:      2
+!URxvt*externalBorder:      0
+!URxvt*borderColor:         #111111
+
+! cursor and pointer settings
+URxvt*cursorBlink:          false
+URxvt*cursorUnderline:      false
+URxvt*pointerBlank:         false
+URxvt*pointerColor:         #000000
+URxvt*pointerColor2:        #111111
+
+! disable the annoying Ctrl+Shift shortcut that enters ISO14755 mode
+URxvt*iso14755:             false
+
+! Perl extensions
+URxvt*perl-ext-common:      default,matcher
+URxvt*urlLauncher:          x-www-browser
+URxvt*matcher.button:       1
+

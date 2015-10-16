@@ -21,6 +21,7 @@ if [ ! -d $BACKDIR ]; then
 fi
 
 # loop over all files and directories in DOTDIR
+echo "Processing..."
 FILES=$DOTDIR/*
 for f in $FILES; do
     # ignore the backup and ignore directories, and this script
@@ -28,7 +29,7 @@ for f in $FILES; do
         # get filename in current path
         name=$(basename "$f")
 
-        echo $name
+        echo "    $name"
 
         # if the current file or directory exists in the user's home directory,
         # move it to the backup directory
@@ -50,6 +51,7 @@ for f in $FILES; do
         unset f
     fi
 done
+echo "Done!"
 
 # clear variable with list of files
 unset FILES
