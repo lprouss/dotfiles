@@ -20,9 +20,16 @@ if [ ! -d $BACKDIR ]; then
     mkdir -p $BACKDIR
 fi
 
+# symlink all files and directories in DOTDIR to HOME, except "backup", "ignore" and "config"
+
+# list of files to process
+FILES=$(find $DOTDIR/* -path $BACKDIR -prune -o -path $IGNOREDIR -prune -o \
+    -path $SCRIPTFILE -name README.md -prune -o -print)
+
+
 # loop over all files and directories in DOTDIR
 echo "Processing..."
-FILES=$DOTDIR/*
+#FILES=$DOTDIR/*
 for f in $FILES; do
     # ignore the backup and ignore directories, and this script
     if [ "$f" != "$SCRIPTFILE" ] && [ "$f" != "$BACKDIR" ] && [ "$f" != "$IGNOREDIR" ]; then

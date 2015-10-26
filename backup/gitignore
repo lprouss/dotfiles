@@ -1,0 +1,92 @@
+## global GIT ignore file
+
+# miscellaneous files
+!.gitignore
+*~
+*.bak
+*.log
+old/
+
+# vim files
+*.swp
+*.un~
+.netrwhist
+Session.vim
+
+# LaTeX files
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.maf
+*.mtc
+*.mtc0
+*.mtcl
+*.nav
+*.nlo
+*.out
+*.pdfsync
+*.pre
+*.snm
+*.synctex.gz
+*.toc
+*.tdo
+*.vrb
+*.xdy
+*-blx.bib
+*.run.xml
+
+# binary document files
+*.dvi
+*.ps
+#*.pdf
+
+# python files
+*.mo
+*.py[cod]
+*.so
+pip-log.txt
+nosetests.xml
+
+# matlab files
+*.asv
+*.m~
+*.mex*
+slprj/
+
+# archive files
+*.7z
+*.jar
+*.rar
+*.zip
+*.gz
+*.bzip
+*.bz2
+*.xz
+*.lzma
+*.iso
+*.tar
+*.dmg
+*.xpi
+*.gem
+*.egg
+*.egg-info
+*.deb
+*.rpm
+

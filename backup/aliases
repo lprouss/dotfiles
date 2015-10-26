@@ -1,0 +1,51 @@
+# default options and aliases for shell commands
+
+##----------------------------------------------------------------------------##
+# set default options for ls and grep and enable colored outputs
+##----------------------------------------------------------------------------##
+alias ls="ls -hCFN --color=auto"
+alias grep="grep -E --color=auto"
+alias egrep='egrep -E --color=auto'
+alias fgrep='fgrep -E --color=auto'
+alias rgrep='rgrep -E --color=auto'
+alias zgrep='zgrep -E --color=auto'
+
+##----------------------------------------------------------------------------##
+## set default options for other unix commands
+##----------------------------------------------------------------------------##
+alias mv="mv -i"
+alias cp="cp -i"
+alias rm="rm -I"
+alias mkdir="mkdir -p"
+alias df="df -hT"
+alias du="du -hsc"
+alias free="free -m"
+alias jobs="jobs -l"
+alias ping="ping -c 10"
+alias wget="wget -c"
+
+##----------------------------------------------------------------------------##
+## useful aliases for ls and cd
+##----------------------------------------------------------------------------##
+alias ll='ls -lh'
+alias la='ls -A'
+alias lla='ls -lhA'
+alias sl='ls'
+
+alias ~="cd ~"
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+##----------------------------------------------------------------------------##
+## other useful aliases
+##----------------------------------------------------------------------------##
+alias update="sudo aptitude update"
+alias upgrade="sudo aptitude upgrade"
+
+#alias bat="acpitool -b"
+
+#alias matlab="matlab -softwareopengl"
+alias matlab-cli="matlab -nosplash -nodesktop"
+
