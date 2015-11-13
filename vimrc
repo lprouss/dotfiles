@@ -46,7 +46,7 @@ Bundle 'honza/vim-snippets'
 " solarized color theme
 Bundle 'altercation/vim-colors-solarized'
 " improved status line
-"Bundle 'bling/vim-airline'
+Bundle 'bling/vim-airline'
 "Bundle 'Lokaltog/powerline'  " heavier than vim-airline
 
 " Git wrapper
@@ -56,7 +56,7 @@ Bundle 'altercation/vim-colors-solarized'
 "Bundle 'scy/vim-remind'
 "Bundle 'smancill/conky-syntax.vim'
 "Bundle 'hdima/python-syntax'
-Bundle 'MatlabFilesEdition'
+"Bundle 'MatlabFilesEdition'
 
 call vundle#end()
 filetype plugin indent on
@@ -77,20 +77,20 @@ colorscheme solarized
 "" status line configuration
 " vim-airline
 "let g:airline_theme = 'powerlineish'
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
-"let g:airline#extensions#whitespace#enabled = 1
-"let g:airline#extensions#whitespace#checks = ['trailing']
-"let g:airline#extensions#whitespace#show_message = 1
-"let g:airline#extensions#whitespace#trailing_format = 'end[%s]'
-"let g:airline#extensions#whitespace#mixed_indent_format = 'tab[%s]'
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#checks = ['trailing']
+let g:airline#extensions#whitespace#show_message = 1
+let g:airline#extensions#whitespace#trailing_format = 'end[%s]'
+let g:airline#extensions#whitespace#mixed_indent_format = 'tab[%s]'
 
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#buffer_nr_show = 1
-"let g:airline#extensions#tabline#buffer_nr_format = '%s:'
-"let g:airline#extensions#tabline#fnamemod = ':p:.'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_nr_format = '%s:'
+let g:airline#extensions#tabline#fnamemod = ':p:.'
 
-"let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 "let g:airline#extensions#syntastic#enabled = 1
 "let g:airline#extensions#tagbar#enabled = 1
 "let g:airline#extensions#ctrlp#enabled = 1
@@ -103,11 +103,11 @@ colorscheme solarized
 "let g:airline_section_y = ''
 "let g:airline_section_z = ''
 "let g:airline_section_warning = ''
-"let g:airline#extensions#default#section_truncate_width = {
-"    \ 'b': 79,
-"    \ 'x': 60,
-"    \ 'y': 79,
-"    \ 'z': 45 }
+let g:airline#extensions#default#section_truncate_width = {
+    \ 'b': 79,
+    \ 'x': 60,
+    \ 'y': 79,
+    \ 'z': 45 }
 
 " don't show the mode (already displayed by vim-airline)
 set noshowmode
