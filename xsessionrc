@@ -6,38 +6,49 @@ if [ -f "$HOME/.profile" ]; then
 	. "$HOME/.profile"
 fi
 
-# launch D-bus: NOW MANAGED BY SYSTEMD
-#if which dbus-launch > /dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-#    eval `dbus-launch --sh-syntax --exit-with-session`
-#fi
-
 # xrandr script?
 # compositor?
 # battery monitor?
 
 # in another file (profile?)?
 # Gnome Polkit and keyring
-# GPG agent
-# language and keymap?
+
+# start GNOME keyring
+#eval $(gnome-keyring-daemon -s --components=ssh,gpg,pkcs11,secrets)
+#eval $(gnome-keyring-daemon -s --components=pkcs11,secrets)
+
+# start GPG and SSH agents
+#export GPG_TTY=$(tty)
+
+#if pgrep -x -u "${USER}" gpg-agent > /dev/null 2>&1; then
+    #eval $(cat ${HOME}/.gpg-agent-info)
+    #eval $(cut -d= -f1 ${HOME}/.gpg-agent-info | xargs echo export)
+#else
+    #eval $(gpg-agent --daemon --write-env-file)
+#fi
+
+#eval $(gpg-agent -s --enable-ssh-support --daemon)
+#eval $(gpg-agent -s --enable-ssh-support --daemon --write-env-file "${HOME}/.gpg-agent-info")
 
 # turn off the system bell
-xset -b &
+xset -b
 
 # merge user's Xresources (terminals configuration)
 # NOTE: merging seems to be done automatically, so probably unnecessary
 #xrdb -merge ~/.Xresources
 
 # set backlight level
-xbacklight -set 80 &
+xbacklight -set 80
 
 # set auto-locking when idle
 xautolock -time 5 -locker 'i3lock -c 000000 -e' &
 
 # set background
-sh ~/.fehbg &
+sh ~/.fehbg
 
 # start urxvt daemon
-urxvtd -q -o -f &
+#urxvtd -q -o -f
+urxvtd -q -f -o
 
 # start i3 window manager
 #exec dbus-launch i3

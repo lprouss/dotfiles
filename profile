@@ -23,21 +23,6 @@ export TZ="America/Toronto"
 # ensure the right keymap is used
 #setxkbmap -layout ca -variant fr
 
-# start GNOME keyring
-#eval $(gnome-keyring-daemon -s --components=ssh,gpg,pkcs11,secrets)
-#eval $(gnome-keyring-daemon -s --components=pkcs11,secrets)
-
-# start GPG and SSH agents
-#export GPG_TTY=$(tty)
-#eval $(gpg-agent -s --enable-ssh-support --daemon)
-#if pgrep -x -u "${USER}" gpg-agent > /dev/null 2>&1
-#then
-#    eval $(cat ${HOME}/.gpg-agent-info)
-#    eval $(cut -d= -f1 ${HOME}/.gpg-agent-info | xargs echo export)
-#else
-    #eval $(gpg-agent -s --enable-ssh-support --daemon --write-env-file "${HOME}/.gpg-agent-info")
-#fi
-
 # define the default terminal, editor and pager
 # TODO: check to make sure the programs are installed
 #export TERM=rxvt-unicode-256color
@@ -53,6 +38,7 @@ export LESS="-R -Mi -x4 --shift 5"
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set colors for ls and grep (dircolors)
+# MOVED TO BASHRC!
 #if [ -x /usr/bin/dircolors ]; then
     #if [ -f "$HOME/.dircolors" ]; then
         #eval "$(SHELL=/bin/sh dircolors -b $HOME/.dircolors)"

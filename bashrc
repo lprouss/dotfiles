@@ -1,7 +1,7 @@
 ## ~/.bashrc: executed by bash(1) for non-login shells.
 
 ##----------------------------------------------------------------------------##
-## exit immediately for non-interactive shells 
+## exit immediately for non-interactive shells
 ##----------------------------------------------------------------------------##
 [[ $- != *i* ]] && return
 #[ -z "$PS1" ] && return
