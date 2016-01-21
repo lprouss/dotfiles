@@ -50,7 +50,7 @@ Bundle 'bling/vim-airline'
 "Bundle 'Lokaltog/powerline'  " heavier than vim-airline
 
 " Git wrapper
-"Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
 
 " syntax files
 "Bundle 'scy/vim-remind'

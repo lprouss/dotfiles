@@ -1,0 +1,72 @@
+# homemade or redefined snippets for TeX and LaTeX
+
+# give this file slightly higher priority than the ones provided by vim-snippets
+priority -40
+
+# table environment (redefined)
+snippet table "Table environment" b
+\begin{table}[${1:htpb}]
+	\centering
+
+	\caption{${2:caption}}
+	\label{tab:${3:label}}
+
+	\begin{${4:t}${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${5:c}}
+		\toprule
+		$0${5/((?<=.)c|l|r)|./(?1: & )/g}
+		\bottomrule
+	\end{$4${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
+\end{table}
+endsnippet
+
+# figure environment (redefined)
+snippet fig "Figure environment" b
+\begin{figure}[${2:htpb}]
+	\centering
+
+	\includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
+
+	\caption{$0}
+	\label{fig:}
+\end{figure}
+endsnippet
+
+# figure environment with subfigures (subcaption package)
+snippet subfig "Figure environment with subfigures" b
+\begin{figure}[${2:htpb}]
+	\begin{subfigure}[b]{${3:0.5}\linewidth}
+		\centering
+
+		\includegraphics[width=\linewidth]{${4:name.ext}}
+
+		\caption{}
+		\label{fig:}
+	\end{subfigure}
+	\begin{subfigure}[b]{${5:0.5}\linewidth}
+		\centering
+
+		\includegraphics[width=\linewidth]{${6:name.ext}}
+
+		\caption{}
+		\label{fig:}
+	\end{subfigure}
+
+	\caption{$0}
+	\label{fig:}
+\end{figure}
+endsnippet
+
+
+# align environments (amsmath package)
+snippet al "Aligned equation" b
+\begin{align}
+	$0
+\end{align}
+endsnippet
+
+snippet alnn "Aligned equation without number" b
+\begin{align*}
+	$0
+\end{align*}
+endsnippet
+
