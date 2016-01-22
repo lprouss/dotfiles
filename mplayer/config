@@ -14,7 +14,8 @@ slang = en,fr,
 noautosub = yes
 
 # handle subtitles as UTF-8
-utf8 = yes
+#unicode = yes
+#utf8 = yes
 
 # disable LIRC support
 nolirc = yes

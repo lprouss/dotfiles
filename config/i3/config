@@ -157,6 +157,14 @@ bar {
         tray_output primary
 }
 
+# move the current workspace to another display
+bindsym $mod+shift+greater move workspace to output right
+bindsym $mod+less move workspace to output left
+
+# move to next/previous workspace
+bindsym $mod+n workspace next
+bindsym $mod+shift+n workspace prev
+
 # start a browser
 bindsym $mod+b exec x-www-browser
 
