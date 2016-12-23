@@ -94,7 +94,7 @@ HISTCONTROL=ignoreboth
 
 # list of patterns to exclude from the history file
 #HISTIGNORE="ls:ls *:ll:ll *:la:la *:free:df:exit:htop:top"
-HISTIGNORE="free:df:exit:htop:top"
+HISTIGNORE="df:exit:htop:top"
 
 # history length and file size
 #HISTSIZE=5000

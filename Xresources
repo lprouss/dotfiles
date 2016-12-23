@@ -31,7 +31,7 @@ Xcursor.size:               22
 !URxvt.geometry:            90x24
 URxvt*loginShell:           false
 URxvt*saveLines:            2000
-URxvt*urgentOnBell:         false
+URxvt*urgentOnBell:         true
 URxvt*pastableTabs:         true
 URxvt*tripleclickwords:     true
 URxvt*hold:                 false
@@ -43,7 +43,7 @@ URxvt*skipBuiltinGlyphs:    true
 URxvt*scrollstyle:          plain
 URxvt*scrollBar:            false
 URxvt*scrollBar_right:      true
-URxvt*thickness:            4 
+URxvt*thickness:            4
 URxvt*scrollTtyKeypress:    true
 URxvt*scrollTtyOutput:      true
 URxvt*scrollWithBuffer:     false
