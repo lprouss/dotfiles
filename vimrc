@@ -46,7 +46,8 @@ Bundle 'honza/vim-snippets'
 " solarized color theme
 Bundle 'altercation/vim-colors-solarized'
 " improved status line
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 "Bundle 'Lokaltog/powerline'  " heavier than vim-airline
 
 " Git wrapper
@@ -63,7 +64,7 @@ filetype plugin indent on
 "" end of Vundle stuff
 
 " load the editexisting macro
-runtime! macros/editexisting.vim
+"runtime! macros/editexisting.vim
 
 "" colorscheme configuration
 set background=dark
@@ -79,16 +80,24 @@ colorscheme solarized
 "let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 0
 
+let g:airline#extensions#wordcount#enabled = 1
+
 let g:airline#extensions#whitespace#enabled = 1
-let g:airline#extensions#whitespace#checks = ['trailing']
+"let g:airline#extensions#whitespace#checks = ['trailing', 'long']
 let g:airline#extensions#whitespace#show_message = 1
 let g:airline#extensions#whitespace#trailing_format = 'end[%s]'
+let g:airline#extensions#whitespace#trailing_format = 'long[%s]'
 let g:airline#extensions#whitespace#mixed_indent_format = 'tab[%s]'
+let g:airline#extensions#whitespace#mixed_indent_file_format = 'mix-tab-space[%s]'
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffers_label = 'buf'
+let g:airline#extensions#tabline#tabs_label = 'tab'
+"let g:airline#extensions#tabline#tab_nr_type = 0
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#buffer_nr_format = '%s:'
 let g:airline#extensions#tabline#fnamemod = ':p:.'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 let g:airline#extensions#branch#enabled = 1
 "let g:airline#extensions#syntastic#enabled = 1
@@ -248,4 +257,11 @@ nnoremap <Leader>cd :lcd %:p:h<CR>
 " jump to last position when reopening a file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$")
             \ | exe "normal! g'\"" | endif
+
+" Add format option 'w' to add trailing white space, indicating that paragraph
+" continues on next line. This is to be used with mutt's 'text_flowed' option.
+augroup mail_trailing_whitespace " {
+    autocmd!
+    autocmd FileType mail setlocal formatoptions+=w
+augroup END " }
 
