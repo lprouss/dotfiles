@@ -166,7 +166,7 @@ bindsym $mod+n workspace next
 bindsym $mod+shift+n workspace prev
 
 # start a browser
-bindsym $mod+b exec x-www-browser
+bindsym $mod+b exec x-www-browser --enable-remote-extensions
 
 # keybindings for sound controls
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -qc 0 set Master 2%- unmute
