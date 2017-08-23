@@ -51,7 +51,7 @@ Bundle 'vim-airline/vim-airline-themes'
 "Bundle 'Lokaltog/powerline'  " heavier than vim-airline
 
 " Git wrapper
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 
 " syntax files
 "Bundle 'scy/vim-remind'
@@ -79,6 +79,7 @@ colorscheme solarized
 " vim-airline
 "let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 0
+let g:airline_symbols_ascii = 1
 
 let g:airline#extensions#wordcount#enabled = 1
 
