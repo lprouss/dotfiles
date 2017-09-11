@@ -24,7 +24,8 @@ $ps_update_method = 0;
 #$ps_update_command = "";
 
 # pdf previewer command
-$pdf_previewer = "start evince %O %S";
+#$pdf_previewer = "start evince %O %S";
+$pdf_previewer = "start zathura %O %S";
 # method used to update a changed pdf file
 # 0: automatic, 1: manual, 2: update signal,
 # 3: no update, 4: custom command
