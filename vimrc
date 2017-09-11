@@ -1,6 +1,5 @@
 "" VIM configuration file
 "" Louis-Philippe Rousseau
-"" September 2013
 
 "" Vundle stuff (instead of Pathogen)
 set nocompatible
@@ -63,8 +62,6 @@ call vundle#end()
 filetype plugin indent on
 "" end of Vundle stuff
 
-" load the editexisting macro
-"runtime! macros/editexisting.vim
 
 "" colorscheme configuration
 set background=dark
@@ -75,9 +72,10 @@ let g:solarized_termtrans = 0
 "let g:solarized_visibility = 'high'
 colorscheme solarized
 
+
 "" status line configuration
 " vim-airline
-"let g:airline_theme = 'powerlineish'
+"let g:airline_theme = 'base16_solarized'
 let g:airline_powerline_fonts = 0
 let g:airline_symbols_ascii = 1
 
@@ -125,12 +123,14 @@ set noshowmode
 " custom status line (if no status line plugin used)
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%03v][%p%%]\ [LC=%L]
 
+
 "" delimitMate configuration
 set matchpairs+=<:>
 let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
 let delimitMate_jump_expansion = 1
 "let delimitMate_exluded_ft = ''
+
 
 "" NerdCommenter configuration
 let NERDDefaultNesting = 0
@@ -139,8 +139,6 @@ let NERDCompactSexyComs = 0
 "let g:NERDCustomDelimiters = {
 "        \ 'filetype': { 'left': 'symb', 'leftAlt': 'symb' } }
 
-"" tagbar configuration
-nnoremap <silent> <F8> :TagbarToggle<CR>
 
 "" ultisnips configuration
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -152,14 +150,13 @@ let g:UltiSnipsSnippetDirectories = ["UltiSnips", "bundle/vim-snippets/UltiSnips
 " let :UltiSnipsEdit split the window for editing
 let g:UltiSnipsEditSplit = "vertical"
 
-"" vim-fugitive configuration
+
+"" tagbar configuration
+"nnoremap <silent> <F8> :TagbarToggle<CR>
 
 
-"" Asymptote support
-augroup filetypedetect
-    au BufNewFile,BufRead *.asy setf asy
-augroup END
-
+" load the editexisting macro
+"runtime! macros/editexisting.vim
 
 "" personal options
 " print line numbers
@@ -186,6 +183,8 @@ set splitright
 set mouse=a
 " command to use for grep
 set grepprg=grep\ -nH\ $*
+" disable bell
+set visualbell t_vb=
 
 " commands autocompletion behaviour
 set wildmode=full

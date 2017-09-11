@@ -13,7 +13,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 10
+#font pango:inconsolata 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -166,7 +167,11 @@ bindsym $mod+n workspace next
 bindsym $mod+shift+n workspace prev
 
 # start a browser
-bindsym $mod+b exec x-www-browser --enable-remote-extensions
+#bindsym $mod+b exec x-www-browser --enable-remote-extensions
+bindsym $mod+b exec x-www-browser
+
+# start a read-only instance of mutt
+bindsym $mod+m exec urxvtc -e mutt -R
 
 # keybindings for sound controls
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -qc 0 set Master 2%- unmute
@@ -183,7 +188,7 @@ bindsym XF86AudioMute exec --no-startup-id amixer -qc 0 set Master toggle
 bindsym XF86ScreenSaver exec --no-startup-id i3lock -c 000000 -e
 
 # run homemade XrandR script
-bindsym XF86Display exec --no-startup-id xrandrHomeDual
+bindsym XF86Display exec --no-startup-id xrandrHomeToggle
 
 # display battery status (homemade notification script)
 #bindsym XF86Battery exec --no-startup-id battInfo
@@ -191,5 +196,17 @@ bindsym XF86Display exec --no-startup-id xrandrHomeDual
 
 
 #for_window [title="Buddy List"] resize set 500 600
-for_window [window_role="conversation"] floating enable, resize set 500 500
+#for_window [window_role="conversation"] floating enable, resize set 500 500
+
+# start autolock
+exec --no-startup-id xautolock -time 5 -locker 'i3lock -c 000000 -e' &
+
+# start urxvt daemon
+exec --no-startup-id urxvtd -q -o -f
+
+# setup monitor configuration
+exec --no-startup-id xrandrHomeDual
+
+# set wallpaper
+#exec --no-startup-id sh ~/.fehbg
 
