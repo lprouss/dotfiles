@@ -1,17 +1,32 @@
 
 ##----------------------------------------------------------------------------##
-## source ~/.profile, if it exists
+## source ~/.profile (path and other environment variables), if it exists
 ##----------------------------------------------------------------------------##
 if [ -f "$HOME/.profile" ]; then
-	. "$HOME/.profile"
+    . "$HOME/.profile"
 fi
 
-# xrandr script?
-# compositor?
-# battery monitor?
 
-# in another file (profile?)?
-# Gnome Polkit and keyring
+##----------------------------------------------------------------------------##
+## X settings
+##----------------------------------------------------------------------------##
+
+# turn off system bell
+if [ -n "$DISPLAY" ]; then
+    xset b off
+fi
+
+# merge user's Xresources (terminals configuration)
+# NOTE: merging seems to be done automatically, so probably unnecessary
+#xrdb -merge ~/.Xresources
+
+
+### THIS IS EITHER USELESS OR WAS MOVED ELSEWHERE ###
+
+## USELESS, WORKS OUT-OF-THE-BOX ##
+
+# set backlight level
+#xbacklight -set 80
 
 # start GNOME keyring
 #eval $(gnome-keyring-daemon -s --components=ssh,gpg,pkcs11,secrets)
@@ -30,27 +45,27 @@ fi
 #eval $(gpg-agent -s --enable-ssh-support --daemon)
 #eval $(gpg-agent -s --enable-ssh-support --daemon --write-env-file "${HOME}/.gpg-agent-info")
 
-# turn off the system bell
-xset -b
+####
 
-# merge user's Xresources (terminals configuration)
-# NOTE: merging seems to be done automatically, so probably unnecessary
-#xrdb -merge ~/.Xresources
-
-# set backlight level
-xbacklight -set 80
+## IN I3 CONFIG NOW ##
 
 # set auto-locking when idle
-xautolock -time 5 -locker 'i3lock -c 000000 -e' &
+#xautolock -time 5 -locker 'i3lock -c 000000 -e' &
 
 # set background
-sh ~/.fehbg
+#sh ~/.fehbg
 
 # start urxvt daemon
 #urxvtd -q -o -f
-urxvtd -q -f -o
+#urxvtd -q -f -o
+
+####
+
+## USELESS WITH LIGHTDM ##
 
 # start i3 window manager
 #exec dbus-launch i3
 #exec x-window-manager
+
+####
 

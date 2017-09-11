@@ -46,8 +46,6 @@ alias upgrade="sudo aptitude upgrade"
 
 alias nt="urxvtc"
 
-#alias bat="acpitool -b"
-
 #alias matlab="matlab -softwareopengl"
 alias matlab-cli="matlab -nosplash -nodesktop"
 

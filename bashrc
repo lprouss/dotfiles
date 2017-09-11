@@ -94,11 +94,11 @@ HISTCONTROL=ignoreboth
 
 # list of patterns to exclude from the history file
 #HISTIGNORE="ls:ls *:ll:ll *:la:la *:free:df:exit:htop:top"
-HISTIGNORE="df:exit:htop:top"
+HISTIGNORE="exit"
 
-# history length and file size
-#HISTSIZE=5000
+# maximum number of lines in the history file
 #HISTFILESIZE=5000
+HISTSIZE=5000
 
 
 ##----------------------------------------------------------------------------##
@@ -141,6 +141,7 @@ fi
 
 # set the primary and secondary prompts
 PS1="${debian_chroot:+($debian_chroot)}$YELLOW[\t] $GREEN\u$RED@$GREEN\h$BLUE \w$ $NO_COLOR"
+#PS1="$YELLOW[\t] $GREEN\u$RED@$GREEN\h$BLUE \w$ $NO_COLOR"
 PS2="> "
 
 # for xterm and rxvt, set the title to user@host:dir
@@ -184,8 +185,13 @@ fi
 # archives extraction and creation
 # file finder
 # swap two filenames: check if files exist; mv 1 tmp; mv 2 1; mv tmp 2
-# run apps (e.g. firefox, evince, ...) in background by default:
-#   function firefox() { command firefox "$@" & }
 # sane permissions for files and directories:
 #   function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ; }
+
+# applications to run in background by default
+function chromium() { command chromium "$@" & }
+function zathura() { command zathura "$@" & }
+function evince() { command evince "$@" & }
+function libreoffice() { command libreoffice "$@" & }
+function feh() { command feh "$@" & }
 

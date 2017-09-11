@@ -14,11 +14,20 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # make sure the right locale is used
-export LANG="en_CA.UTF-8"
-export LANGUAGE="en_CA:en"
-export LC_ALL="en_CA.UTF-8"
-export LC_CTYPE="en_CA.UTF-8"
-export TZ="America/Toronto"
+unset LC_ALL
+export LANG=en_CA.UTF-8
+#export LC_COLLATE=
+#export LC_CTYPE=en_CA.UTF-8
+export LC_MESSAGES=C
+#export LC_NUMERIC=en_CA.UTF-8
+#export LC_TIME=en_CA.UTF-8
+export LANGUAGE=en_CA:en
+#export LC_ADDRESS=
+#export LC_MONETARY=
+#export LC_MEASUREMENT=
+#export LC_PAPER=
+#export LC_RESPONSE=
+#export LC_TELEPHONE=
 
 # ensure the right keymap is used
 #setxkbmap -layout ca -variant fr
@@ -29,13 +38,16 @@ export TZ="America/Toronto"
 export EDITOR=vim
 export VISUAL=$EDITOR
 export PAGER=less
-export MANPAGER="vim  -c '%"'!'"col -b' -c 'set ft=man nomod nolist nonumber nomodifiable nowrap ignorecase' -c 'nmap q :q<cr>' -"
+export MANPAGER="vim -c '%"'!'"col -b' -c 'set ft=man nomod nolist nonumber nomodifiable nowrap ignorecase' -c 'nmap q :q<cr>' -"
 
 # set options for less
 export LESS="-R -Mi -x4 --shift 5"
 
 # make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# correct behavior for "man"
+#export MAN_POSIXLY_CORRECT=1
 
 # set colors for ls and grep (dircolors)
 # MOVED TO BASHRC!
@@ -55,9 +67,9 @@ export LESS="-R -Mi -x4 --shift 5"
 ##----------------------------------------------------------------------------##
 ## source user's bashrc, if running bash and ~/.bashrc exists
 ##----------------------------------------------------------------------------##
-#if [ -n "$BASH_VERSION" ]; then
-    #if [ -f "$HOME/.bashrc" ]; then
-		#. "$HOME/.bashrc"
-    #fi
-#fi
+if [ -n "$BASH_VERSION" ]; then
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
 
