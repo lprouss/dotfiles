@@ -1,0 +1,19 @@
+set from = "lprouss@gmail.com"
+unset signature
+
+#set mbox = "+gmail/archives"
+set postponed = "+gmail/drafts"
+#set record = "+gmail/sent"
+unset record   # Gmail automatically saves sent mail in the Sent folder
+set trash = "+gmail/trash"
+#unset record
+
+set sendmail = "/usr/bin/msmtp"
+
+
+#set maildir_trash
+
+# mark mail as spam
+macro index S "<tag-prefix><enter-command>unset resolve<enter><tag-prefix><clear-flag>N<tag-prefix><enter-command>set resolve<enter><tag-prefix><save-message>=gmail/spam/<enter>" "file as Spam"
+macro pager S "<save-message>=gmail/spam/<enter>" "file as Spam"
+

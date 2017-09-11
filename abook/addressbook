@@ -1,0 +1,549 @@
+# abook addressbook file
+
+[format]
+program=abook
+version=0.6.1
+
+
+[0]
+name=Alexandre Bastien
+email=bastien.al@gmail.com
+city=Québec
+state=QC
+
+[1]
+name=Amélie Rousseau-Bordeleau
+email=amerousseau@hotmail.com
+city=Québec
+state=QC
+
+[2]
+name=Andréane Rousseau-Bordeleau
+email=drew_bordeleau@hotmail.com
+city=St-Étienne-de-Lauzon
+state=QC
+zip=G6J 1W7
+phone=418-496-1570
+address=64\, rue du Périgord
+
+[3]
+name=Annabelle Rousseau
+email=bebelle_458@hotmail.com
+city=Québec
+state=QC
+mobile=418-573-9958
+address=775\, rue de Rougemont\, app. 19
+
+[4]
+name=Benoit Landry
+city=Rivière-du-Loup
+state=QC
+mobile=418-860-8872
+
+[5]
+name=Catherine Bastille-Rousseau
+email=bastille_rousseau_catherine@hotmail.com
+city=Trois-Rivières
+state=QC
+address=Mélissa Racine
+
+[6]
+name=Charles-Gabriel Deslauriers
+email=charles-gabriel.deslauriers.1@ulaval.ca
+
+[7]
+name=Charlotte Narr
+email=charlottenarr@trentu.ca
+mobile=(705) 930-2582
+
+[8]
+name=Christoph Gierull
+email=Christoph.Gierull@drdc-rddc.gc.ca,gierull.nagy@rogers.com
+city=Ottawa
+state=ON
+zip=K1A 0Z
+workphone=613-990-1616
+mobile=613-796-4890
+address=Defence R&D Canada \n3701\, Carling Avenue
+
+[9]
+name=Cristina Thomson
+email=cristinathomson@sympatico.ca
+city=Kanata
+state=ON
+zip=K2K 2J9
+phone=613-592-2385
+mobile=613-889-6713
+address=35\, Collingwood Cr.
+
+[10]
+name=Danette Bilodeau
+email=danette.bilodeau@gmail.com
+city=Saskatoon
+state=SK
+mobile=306-270-6271
+
+[11]
+name=Daniel Shirley
+email=daniel.shirley@marinetraffic.com
+
+[12]
+name=David Goulet
+email=vanmortel@gmail.com,dgoulet@ev0ke.net
+phone=514-397-0335
+address=7798\, rue Boyer\nMontréal\, QC
+
+[13]
+name=David Roy-Guay
+email=ngc6751@gmail.com,david.roy-guay@usherbrooke.ca
+city=Sherbrooke
+state=QC
+mobile=819-993-0958
+
+[14]
+name=Dirk Geudtner
+email=Dirk.Geudtner@dlr.de,dirk.geudtner@esa.int
+
+[15]
+name=Dominique Grenier
+email=Dominic.Grenier@gel.ulaval.ca
+city=Québec
+state=QC
+
+[16]
+name=Dominique Rousseau
+url=http\://www.google.com/profiles/112970649610671250170
+
+[17]
+name=Dominique Rousseau
+email=ermen_egile@hotmail.com
+city=Pohénégamook
+state=QC
+zip=G0L 1J0
+mobile=418-714-4689
+address=856\, rue de l'Église
+
+[18]
+name=Élise Rioux-Paquet
+email=elyzrp@hotmail.com
+city=Sherbrooke
+state=QC
+
+[19]
+name=Élodie Rousseau-Sirois
+city=Montréal
+state=QC
+
+[20]
+name=Elsa Rousseau-Sirois
+city=Longueuil
+state=QC
+
+[21]
+name=Étienne Bastille-Rousseau
+email=utero5@hotmail.com
+city=St-Jean-su
+mobile=514-212-6334
+address=Oana Harsan
+
+[22]
+name=Félix D'Amours
+email=felixd33@hotmail.com,felix.damours@desjardins.com
+city=Lévis
+state=QC
+phone=418-914-2758
+mobile=418-271-5286
+
+[23]
+name=Fernande Rousseau
+city=Québec
+state=QC
+zip=G1W 1C5
+phone=418-650-3920
+address=Mario Léonard
+
+[24]
+name=François Charest
+email=freinque@gmail.com
+city=New York
+state=NY
+mobile=514-998-5344
+
+[25]
+name=Gabriel Girard
+email=gabriel.girard.3@ulaval.ca
+
+[26]
+name=Guillaume Bastille-Rousseau
+email=guillaume_le_grand@hotmail.com,gbastillerous@trentu.ca
+city=Syracuse
+state=NY
+mobile=705-875-7933
+
+[27]
+name=Guillaume Bergeron
+city=Québec
+state=QC
+mobile=(418) 455-4369
+
+[28]
+name=Guillaume Bolduc
+city=Québec
+state=QC
+mobile=418-894-8315
+
+[29]
+name=Guillaume Duclos-Cianci
+email=guillaume.ducloscianci@gmail.com,guillaume.duclos-cianci@usherbrooke.ca
+mobile=514-659-4720
+address=7040\, rue Baunard\,  app. 6\, Montréal\, QC
+
+[30]
+name=Guy Seguin
+email=gseguin_isc@icloud.com
+
+[31]
+name=Hubert Pelletier
+email=hub_pel@hotmail.com
+city=Sherbrooke
+state=QC
+zip=J1L 2E1
+phone=819-346-0765
+mobile=819-943-5157
+address=3635\, rue Rousseau
+
+[32]
+name=Ishuwa Sikaneta
+email=Ishuwa.Sikaneta@drdc-rddc.gc.ca
+city=Ottawa
+state=ON
+zip=K1A 0Z4
+country=Canada
+address=Defence R&D 3701\, Carling Avenue
+
+[33]
+name=Jacinthe Rousseau
+city=St-Lambert-de-Lauzon
+state=QC
+zip=G0S 2W0
+phone=418-889-9070
+address=Michel Bordeleau
+
+[34]
+name=Jean Rousseau
+email=rouge856@videotron.ca,jean.rousseau@mfa.gouv.qc.ca
+city=Québec
+state=QC
+zip=G1R 3T9
+phone=418-692-2421
+address=16\, rue Mgr De Laval
+
+[35]
+name=Jean-Francois Briand-Corbet
+email=jfrancoisbc@hotmail.com
+city=Port-Daniel
+state=QC
+mobile=581-233-6997
+
+[36]
+name=Jean-François Grondin
+email=j.grondin.f@gmail.com
+city=Québec
+state=QC
+
+[37]
+name=Jean-Yves Chouinard
+email=Jean-Yves.Chouinard@gel.ulaval.ca
+city=Québec
+state=QC
+workphone=418-656-2131 ext. 2966
+
+[38]
+name=Jeff Turmel
+mobile=418-313-0304
+
+[39]
+name=Joanie Laquerre
+email=joanie.laquerre@outlook.com
+city=Québec
+state=QC
+mobile=418-284-9652
+
+[40]
+name=Jonathan Lavoie
+email=lavoie_jonathan@hotmail.com
+
+[41]
+name=Julia Léonard
+email=leonard.julia@hotmail.com
+city=Québec
+state=QC
+
+[42]
+name=Julie Rousseau-Bordeleau
+city=Québec
+state=QC
+
+[43]
+name=Kathie Macmillan
+email=kathie.macmillan@drdc-rddc.gc.ca,Kathie.macmillan@forces.gc.ca
+city=Ottawa
+address=DRDC-
+
+[44]
+name=Kevin Lalumière
+email=kevin.lalumiere@gmail.com
+city=Sherbrooke
+state=QC
+address2=1984-11-29
+
+[45]
+name=Louis Rousseau
+email=pauferlou@gmail.com
+city=Pohénégamook
+state=QC
+zip=G0L 1J0
+phone=418-859-2211
+mobile=418-860-6048
+address=Françoise Bélanger
+
+[46]
+name=Louis-Philippe Rousseau
+email=lprouss@gmail.com,louis-philippe.b-rousseau.1@ulaval.ca,louis-philippe.b-rousseau@usherbrooke.ca,louis-philippe.rousseau@drdc-rddc.gc.ca
+city=Québec
+state=QC
+zip=G1M 3V7
+mobile=581-997-0378
+address=1887\, rue de Merlac
+
+[47]
+name=Louise Rousseau
+city=Pohénégamook
+state=QC
+zip=G0L 1J0
+phone=418-859-2092
+address=Louis Sirois
+
+[48]
+name=Marc-Antoine Rousseau
+email=marousseau_18@hotmail.com
+city=Pohénégamook
+state=QC
+zip=G0L 1J0
+mobile=418-860-6264
+address=856\, rue de l'Église
+
+[49]
+name=Marcel Laperle
+email=Marcel.Laperle@USherbrooke.ca
+
+[50]
+name=Marie-Hélėne Dupont
+mobile=418-809-0020
+
+[51]
+name=Marie-Lou Rousseau-Sirois
+email=loumarie15@hotmail.com
+city=Québec
+state=QC
+
+[52]
+name=Marise Gagné
+email=marise.gagne@desjardins.com
+
+[53]
+name=Martin Rousseau
+city=Rimouski
+state=QC
+zip=G0L 1B0
+phone=418-736-5951
+mobile=418-730-5366
+address=Fernande Lévesque
+
+[54]
+name=Mathieu Boivin
+email=mathieuboivin2@gmail.com,mathieu.boivin.4@ulaval.ca
+city=Québec
+state=QC
+
+[55]
+name=Mathieu Gallichand
+email=mathieu.gallichand.1@ulaval.ca,mgallichand@gmail.com
+city=Lévis
+state=QC
+
+[56]
+name=Mathilde Sénéchal
+city=Québec
+state=QC
+mobile=418-254-2862
+
+[57]
+name=Maude Larouche
+mobile=418-752-4779
+address=Port-Daniel\, QC
+
+[58]
+name=Maude Rousseau-Bordeleau
+email=maude_lion@hotmail.com
+city=Québec
+state=QC
+
+[59]
+name=Maxime Morel
+email=max.morel@gmail.com
+city=Lévis
+state=QC
+
+[60]
+name=Michèle Mourad
+email=michele.mourad@gel.ulaval.ca
+
+[61]
+name=Micheline Rousseau
+city=Québec
+state=QC
+zip=G3G 1N4
+phone=418-849-2743
+mobile=418-573-8356 (Guy)
+address=Guy Bérubé
+
+[62]
+name=Nicolas Guillette
+email=mystifymen@hotmail.com
+city=Sherbrooke
+state=QC
+mobile=819-679-6420
+
+[63]
+name=Nicolas Guillette
+url=http\://www.google.com/profiles/109670466827255461484
+
+[64]
+name=Nicolas Michaud
+email=michaud_nico@hotmail.com
+city=Québec
+state=QC
+mobile=418-455-7812
+
+[65]
+name=Oana Harsan
+url=http\://www.google.com/profiles/106638602548712766171
+
+[66]
+name=Pascal Djiknavorian
+email=pascal.djiknavorian@gmail.com,pascal.djiknavorian.1@ulaval.ca
+city=Montréal
+state=QC
+mobile=418-264-5222
+
+[67]
+name=Pierre-Gabriel Léonard
+email=peter.gab.01@gmail.com
+city=Montréal
+state=QC
+
+[68]
+name=Pierre-Luc Mallet
+email=Pierre-Luc.Mallet@USherbrooke.ca,sniperpeter@hotmail.com
+city=Sherbrooke
+state=QC
+phone=819-542-5587
+
+[69]
+name=Qiong (Chace) Zhang
+email=chace.zhang.cas@gmail.com,qiong.zhang.1@ulaval.ca
+city=Québec
+state=QC
+mobile=418-454-6469
+
+[70]
+name=Ramata Magagi
+email=Ramata.Magagi@USherbrooke.ca
+city=Sherbrooke
+state=QC
+phone=819-823-6841
+
+[71]
+name=Réal Rousseau
+city=Pohénégamook
+state=QC
+zip=G0L 1J0
+phone=418-859-3329
+address=Diane Bastille
+
+[72]
+name=Rémi Lavoie
+city=Pohénégamook
+state=QC
+mobile=418-551-1922
+
+[73]
+name=Robert Leconte
+email=Robert.Leconte@USherbrooke.ca
+city=Sherbrooke
+state=QC
+
+[74]
+name=Samuel Jean
+email=kamuelghan@hotmail.com
+city=Rivière-du-Loup
+state=QC
+
+[75]
+name=Sébastien Bouchard
+email=sebastien.bouchard.6@ulaval.ca
+city=Québec
+state=QC
+
+[76]
+name=Sébastien Lévesque
+email=slevesque@upa.qc.ca,upaslevesque@globetrotter.net
+city=Rivière-du-Loup
+state=QC
+workphone=418-867-3663
+
+[77]
+name=Simon Branchaud
+email=lesimonac@gmail.com
+city=St-Jérôme
+state=QC
+zip=J5L 0C5
+mobile=450-822-5742
+address=650\, Boul. de la Salette\, app. 305
+address2=1985-10-18
+
+[78]
+name=soutienTI
+email=soutienTI@USherbrooke.ca
+
+[79]
+name=Taxi Coop
+workphone=418-525-5191
+
+[80]
+name=Taxi Laurier
+workphone=418-651-2727
+
+[81]
+name=Valérie Guérin
+url=http\://www.google.com/profiles/114341544254911311120
+
+[82]
+name=Yann Briand
+city=Lévis
+state=QC
+mobile=581-991-5288
+
+[83]
+name=Yvan Rousseau
+city=La Pocatière
+state=QC
+zip=G0R 1
+phone=418-856-5131
+address=Aline Hudon
+
+[84]
+name=auto-confirm@amazon.ca
+email=auto-confirm@amazon.ca
+

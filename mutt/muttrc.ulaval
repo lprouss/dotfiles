@@ -1,0 +1,34 @@
+set from = "louis-philippe.b-rousseau.1@ulaval.ca"
+unset signature
+
+#set mbox = "+ulaval/archives"
+set postponed = "+ulaval/drafts"
+set record = "+ulaval/sent"
+set trash = "+ulaval/trash"
+
+# do not sign messages by default
+unset crypt_autosign
+
+# mark mail as spam
+macro index S "<tag-prefix><enter-command>unset resolve<enter><tag-prefix><clear-flag>N<tag-prefix><enter-command>set resolve<enter><tag-prefix><save-message>=ulaval/spam/<enter>" "file as Spam"
+macro pager S "<save-message>=ulaval/spam/<enter>" "file as Spam"
+
+set sendmail = "/usr/bin/msmtp -a gandi-work"
+
+#unset maildir_trash
+
+# Define <tab> and = in order to switch or see the current msmtp account
+# from http://msmtp.sourceforge.net/doc/msmtp.html#Using-msmtp-with-Mutt
+#macro compose \Cx_ "<enter-command>set sendmail"
+#macro compose \Cx| "\Cx_ = \"/usr/bin/msmtp"
+#macro compose \Cx& "<enter-command>macro compose \\t \\Cx"
+#macro compose <tab> "\Cx0"
+#macro compose = "\Cx_\n"
+# Put the account in the following lines (here three accounts)
+# Don't forget to put the number of the account at the beginning
+# of the line, and the number of the next account after the '&'
+#macro compose \Cx0 "\Cx|\"\n\Cx&1\n\Cx_\n" # default and switch to 1
+#macro compose \Cx1 "\Cx| -a gandi-work\"\n\Cx&2\n\Cx_\n" # switch to 2
+#macro compose \Cx2 "\Cx| -a gandi-home\"\n\Cx&0\n\Cx_\n" # switch to 0
+
+

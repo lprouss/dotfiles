@@ -1,0 +1,24 @@
+text/html; w3m -dump -F -I %{charset} -O utf-8 -T text/html %s; nametemplate=%s.html; copiousoutput;
+#text/html; elinks -dump ; copiousoutput;
+
+text/plain; less %s; copiousoutput;
+text/markdown; less %s; copiousoutput;
+application/octet-stream; less %s; copiousoutput;
+application/x-objcsrc; less %s; copiousoutput;
+
+#application/pdf; zathura %s;
+#application/x-pdf; zathura %s;
+#application/x-download; zathura %s;
+application/*; xdg-open %s;
+
+image/*; feh -. %s;
+image/x-eps; xdg-open %s;
+image/tiff; xdg-open %s;
+video/*; xdg-open %s;
+audio/*; xdg-open %s;
+
+#application/vnd.oasis.opendocument.text; libreoffice %s;
+#application/vnd.oasis.opendocument.spreadsheet; libreoffice %s;
+#application/vnd.oasis.opendocument.presentation; libreoffice %s;
+#application/vnd.oasis.opendocument.image; libreoffice %s;
+

@@ -1,0 +1,164 @@
+### mbsync configuration file
+
+### global configuration
+# sync everything
+Sync All
+# automatically create missing local and remote mailboxes
+Create Both
+# do not permanently remove local and remote messages marked for deletion
+Expunge Both
+# do not propagate the message arrival time
+CopyArrivalDate no
+# save the sync state files in the local mailboxes
+SyncState *
+
+###--------------------------------------------------------------------------###
+### Gmail account configuration
+IMAPAccount gmail
+# host (SSL)
+Host imap.gmail.com
+SSLType IMAPS
+SSLVersions TLSv1.2
+# username
+User lprouss@gmail.com
+# use pass to retrieve password
+#PassCmd "pass show Mail/Gmail"
+#PassCmd "gpg -q --for-your-eyes-only --no-tty -d /home/elpe/.password-store/Mail/Gmail.gpg"
+PassCmd "/home/elpe/bin/getMailPass Gmail"
+
+### remote Gmail repository
+IMAPStore gmail-remote
+# use previously defined Gmail account
+Account gmail
+
+### local Gmail repository
+MaildirStore gmail-local
+# path to the local repository
+Path ~/mail/gmail/
+# path to the inbox
+Inbox ~/mail/gmail/INBOX
+
+# channel for inbox
+Channel gmail-inbox
+# the remote and local mailboxes are both named "INBOX"
+Master :gmail-remote:
+Slave :gmail-local:
+#Patterns "INBOX" "[Gmail]/Sent Mail" "[Gmail]/Drafts" "[Gmail]/Spam" "[Gmail]/Trash"
+
+# channel for drafts
+Channel gmail-drafts
+# the remote mailbox is located under the "[Gmail]" folder
+Master :gmail-remote:"[Gmail]/Drafts"
+# the local mailbox is named "drafts"
+Slave :gmail-local:drafts
+
+# channel for sent mail
+Channel gmail-sent
+# the remote mailbox is located under the "[Gmail]" folder
+Master :gmail-remote:"[Gmail]/Sent Mail"
+# the local mailbox is named "sent"
+Slave :gmail-local:sent
+
+# channel for spam
+Channel gmail-spam
+# the remote mailbox is located under the "[Gmail]" folder
+Master :gmail-remote:"[Gmail]/Spam"
+# the local mailbox is named "spam"
+Slave :gmail-local:spam
+
+# channel for trash
+Channel gmail-trash
+# the remote mailbox is located under the "[Gmail]" folder
+Master :gmail-remote:"[Gmail]/Trash"
+# the local mailbox is named "trash"
+Slave :gmail-local:trash
+
+# channel for archives
+Channel gmail-archives
+# user-created remote mailbox
+Master :gmail-remote:"Archives"
+# the local mailbox is named "archives"
+Slave :gmail-local:archives
+
+# group all or some of the previously defined channels
+Group gmail
+    Channel gmail-inbox
+    Channel gmail-sent
+    Channel gmail-drafts
+    Channel gmail-spam
+    Channel gmail-trash
+    Channel gmail-archives
+
+
+###--------------------------------------------------------------------------###
+### ULaval account configuration
+IMAPAccount ulaval
+# host (STARTTLS)
+Host courriel.ulaval.ca
+SSLType STARTTLS
+SSLVersions TLSv1.2
+# username
+User lpbr0
+# use pass to retrieve password
+#PassCmd "pass show Mail/ULaval"
+#PassCmd "gpg -q --batch --for-your-eyes-only --no-tty -d /home/elpe/.password-store/Mail/ULaval.gpg"
+PassCmd "/home/elpe/bin/getMailPass ULaval"
+
+### remote ULaval repository
+IMAPStore ulaval-remote
+# use previously defined ULaval account
+Account ulaval
+
+### local ULaval repository
+MaildirStore ulaval-local
+# path to the local repository
+Path ~/mail/ulaval/
+# path to the inbox
+Inbox ~/mail/ulaval/INBOX
+
+# channel for inbox
+Channel ulaval-inbox
+# the remote and local mailboxes are both named "INBOX"
+Master :ulaval-remote:
+Slave :ulaval-local:
+
+# channel for drafts
+Channel ulaval-drafts
+Master :ulaval-remote:"Drafts"
+# the local mailbox is named "drafts"
+Slave :ulaval-local:drafts
+
+# channel for sent mail
+Channel ulaval-sent
+Master :ulaval-remote:"Sent Items"
+# the local mailbox is named "sent"
+Slave :ulaval-local:sent
+
+# channel for spam
+Channel ulaval-spam
+Master :ulaval-remote:"Junk Email"
+# the local mailbox is named "spam"
+Slave :ulaval-local:spam
+
+# channel for trash
+Channel ulaval-trash
+Master :ulaval-remote:"Deleted Items"
+# the local mailbox is named "trash"
+Slave :ulaval-local:trash
+
+# channel for archives
+Channel ulaval-archives
+# user-created remote mailbox
+Master :ulaval-remote:"Archives"
+# the local mailbox is named "archives"
+Slave :ulaval-local:archives
+
+# group all or some of the previously defined channels
+Group ulaval
+    Channel ulaval-inbox
+    Channel ulaval-sent
+    Channel ulaval-drafts
+    Channel ulaval-spam
+    Channel ulaval-trash
+    Channel ulaval-archives
+
