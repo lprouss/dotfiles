@@ -193,6 +193,8 @@ bindsym XF86Display exec --no-startup-id xrandrHomeToggle
 # display battery status (homemade notification script)
 #bindsym XF86Battery exec --no-startup-id battInfo
 
+## NOTE:
+# Use 'exec --no-startup-id' to skip waiting for the application to open on the correct workspace, i.e. the one which was focused when the application was started.
 
 
 #for_window [title="Buddy List"] resize set 500 600
@@ -203,6 +205,7 @@ exec --no-startup-id xautolock -time 5 -locker 'i3lock -c 000000 -e' &
 
 # start urxvt daemon
 exec --no-startup-id urxvtd -q -o -f
+#exec --no-startup-id urxvtd -q -f -o
 
 # setup monitor configuration
 exec --no-startup-id xrandrHomeDual

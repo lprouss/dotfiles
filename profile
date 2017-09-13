@@ -2,6 +2,9 @@
 # NOTE: this file can be sourced by, e.g. ~.bash_profile or ~/.zprofile, so
 # that it can be used by different command interpreters.
 
+# NOTE: when lightdm is used, this file is not sourced (at least for Debian).
+# Create a file .xsessionrc and source .profile in there.
+
 # debug variable to verify if this file is read
 #export READ_PROF=1
 
@@ -67,6 +70,7 @@ export LESS="-R -Mi -x4 --shift 5"
 ##----------------------------------------------------------------------------##
 ## source user's bashrc, if running bash and ~/.bashrc exists
 ##----------------------------------------------------------------------------##
+# needed so that bashrc is sourced when accessing the system using ssh
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
         . "$HOME/.bashrc"

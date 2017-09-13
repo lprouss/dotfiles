@@ -15,6 +15,7 @@ fi
 if [ -n "$DISPLAY" ]; then
     xset b off
 fi
+#xset -b
 
 # merge user's Xresources (terminals configuration)
 # NOTE: merging seems to be done automatically, so probably unnecessary
@@ -48,16 +49,16 @@ fi
 ####
 
 ## IN I3 CONFIG NOW ##
-
+#
 # set auto-locking when idle
-#xautolock -time 5 -locker 'i3lock -c 000000 -e' &
+#[ -x /usr/bin/xautolock ] && xautolock -time 5 -locker 'i3lock -c 000000 -e' &
+
+# start urxvt daemon
+#[ -x /usr/bin/urxvtd ] && urxvtd -q -f -o
+#[ -x /usr/bin/urxvtd ] && urxvtd -q -o -f
 
 # set background
 #sh ~/.fehbg
-
-# start urxvt daemon
-#urxvtd -q -o -f
-#urxvtd -q -f -o
 
 ####
 
