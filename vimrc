@@ -76,52 +76,80 @@ colorscheme solarized
 "" status line configuration
 " vim-airline
 "let g:airline_theme = 'base16_solarized'
-let g:airline_powerline_fonts = 0
+"let g:airline_powerline_fonts = 0
+let g:airline_left_sep='>'
+let g:airline_right_sep='<'
 let g:airline_symbols_ascii = 1
 
+let g:airline_detect_modified = 1
+let g:airline_detect_paste = 1
+let g:airline_detect_crypt = 1
+let g:airline_detect_spell = 1
+let g:airline_inactive_collapse = 1
+let g:airline_exclude_preview = 0
+let g:airline_skip_empty_sections = 1
+
+"let g:airline#extensions#disable_rtp_load = 1
+
 let g:airline#extensions#wordcount#enabled = 1
+"let g:airline#extensions#wordcount#format = '%d w.'
 
 let g:airline#extensions#whitespace#enabled = 1
-"let g:airline#extensions#whitespace#checks = ['trailing', 'long']
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
+let g:airline#extensions#whitespace#symbol = ''
+"let g:airline#extensions#whitespace#checks = ['indent', 'trailing', 'long', 'mixed-indent-file']
+let g:airline#extensions#whitespace#checks = ['indent', 'trailing', 'mixed-indent-file']
 let g:airline#extensions#whitespace#show_message = 1
 let g:airline#extensions#whitespace#trailing_format = 'end[%s]'
-let g:airline#extensions#whitespace#trailing_format = 'long[%s]'
+let g:airline#extensions#whitespace#long_format = 'long[%s]'
 let g:airline#extensions#whitespace#mixed_indent_format = 'tab[%s]'
 let g:airline#extensions#whitespace#mixed_indent_file_format = 'mix-tab-space[%s]'
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffers_label = 'buf'
-let g:airline#extensions#tabline#tabs_label = 'tab'
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#exclude_preview = 1
 "let g:airline#extensions#tabline#tab_nr_type = 0
+"let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#buffers_label = 'b'
+let g:airline#extensions#tabline#tabs_label = 't'
+"let g:airline#extensions#tabline#buffer_idx_mode = 1
+"let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#buffer_nr_format = '%s:'
-let g:airline#extensions#tabline#fnamemod = ':p:.'
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+"let g:airline#extensions#tabline#fnamemod = ':p:.'
+"let g:airline#extensions#tabline#fnamecollapse = 1
+"let g:airline#extensions#tabline#fnametruncate = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+"let g:airline#extensions#tabline#show_close_button = 1
+"let g:airline#extensions#tabline#close_symbol = 'X'
 
 let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#empty_message = ''
+"let g:airline#extensions#branch#displayed_head_limit = 10
+let g:airline#extensions#branch#format = 1
+
 "let g:airline#extensions#syntastic#enabled = 1
 "let g:airline#extensions#tagbar#enabled = 1
 "let g:airline#extensions#ctrlp#enabled = 1
+"let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 
-"let g:airline_section_a = ''
-"let g:airline_section_b = ''
-"let g:airline_section_c = ''
-"let g:airline_section_gutter = ''
-"let g:airline_section_x = ''
-"let g:airline_section_y = ''
-"let g:airline_section_z = ''
-"let g:airline_section_warning = ''
 let g:airline#extensions#default#section_truncate_width = {
     \ 'b': 79,
     \ 'x': 60,
     \ 'y': 79,
-    \ 'z': 45 }
+    \ 'z': 45,
+    \ 'warning': 80,
+    \ 'error': 80,
+    \ }
+
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 
 " don't show the mode (already displayed by vim-airline)
 set noshowmode
 
 " custom status line (if no status line plugin used)
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%03v][%p%%]\ [LC=%L]
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%03v][%p%%]\ [LC=%L]
 
 
 "" delimitMate configuration
