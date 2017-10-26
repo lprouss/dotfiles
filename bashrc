@@ -178,20 +178,23 @@ fi
 ##----------------------------------------------------------------------------##
 ## define scripts
 ##----------------------------------------------------------------------------##
-# display reminders on terminal launch
-#rem_file=~/.reminders
-#remind -qr -ga $rem_file
-
-# archives extraction and creation
-# file finder
-# swap two filenames: check if files exist; mv 1 tmp; mv 2 1; mv tmp 2
-# sane permissions for files and directories:
-#   function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ; }
 
 # applications to run in background by default
 function chromium() { command chromium "$@" & }
-function zathura() { command zathura "$@" & }
 function evince() { command evince "$@" & }
 function libreoffice() { command libreoffice "$@" & }
 function feh() { command feh "$@" & }
+#function zathura() { command zathura "$@" & } # use fork option instead
+
+# sane permissions for files and directories
+function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ; }
+
+# TODO:
+#   - archives extraction and creation
+#   - file finder (shorter command)
+#   - swap two filenames: check if files exist; mv 1 tmp; mv 2 1; mv tmp 2
+
+# display reminders on terminal launch
+#rem_file=~/.reminders
+#remind -qr -ga $rem_file
 

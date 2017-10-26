@@ -41,11 +41,20 @@ alias ....="cd ../../.."
 ##----------------------------------------------------------------------------##
 ## other useful aliases
 ##----------------------------------------------------------------------------##
-alias update="sudo aptitude update"
-alias upgrade="sudo aptitude upgrade"
 
+# short commands for update
+#alias update="sudo aptitude update"
+#alias upgrade="sudo aptitude upgrade"
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
+
+# open new urxvt client
 alias nt="urxvtc"
 
+# MATLAB
 #alias matlab="matlab -softwareopengl"
 alias matlab-cli="matlab -nosplash -nodesktop"
+
+# open zathura in background by default
+alias zathura="zathura --fork"
 
