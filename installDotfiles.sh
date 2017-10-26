@@ -38,13 +38,13 @@ BACKDIR="$DOTDIR/backup"
 
 ## list of dotfiles and configuration directories to process
 # located directly in the user's home directory (~)
-#DOTHOME="bashrc gitconfig aliases dircolors inputrc Xresources Xresources.d \
-    #gitignore i3status.conf vimrc vim abook mbsyncrc msmtprc mutt profile \
-    #xsessionrc latexmkrc"
-DOTHOME="latexmkrc"
+DOTHOME="abook aliases bashrc dircolors gitconfig gitignore i3status.conf \
+	inputrc latexmkrc mbsyncrc msmtprc mutt profile vimrc vim Xresources \
+	Xresources.d xsessionrc"
+#DOTHOME="latexmkrc"
 # located in the user's config directory (~/.config)
-#DOTCONF="user-dirs.dirs user-dirs.locale htop i3 zathura"
-DOTCONF="mpv"
+DOTCONF="htop i3 mpv user-dirs.dirs user-dirs.locale zathura"
+#DOTCONF="mpv"
 
 
 ################################################################################
