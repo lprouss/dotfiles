@@ -56,7 +56,7 @@ Bundle 'vim-airline/vim-airline-themes'
 "Bundle 'scy/vim-remind'
 "Bundle 'smancill/conky-syntax.vim'
 "Bundle 'hdima/python-syntax'
-"Bundle 'MatlabFilesEdition'
+Bundle 'MatlabFilesEdition'
 
 call vundle#end()
 filetype plugin indent on
