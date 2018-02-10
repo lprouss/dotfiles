@@ -35,13 +35,16 @@ export LANGUAGE=en_CA:en
 # ensure the right keymap is used
 #setxkbmap -layout ca -variant fr
 
+# set default umask for user
+umask 0027
+
 # define the default terminal, editor and pager
 # TODO: check to make sure the programs are installed
 #export TERM=rxvt-unicode-256color
 export EDITOR=vim
 export VISUAL=$EDITOR
 export PAGER=less
-export MANPAGER="vim -c '%"'!'"col -b' -c 'set ft=man nomod nolist nonumber nomodifiable nowrap ignorecase' -c 'nmap q :q<cr>' -"
+#export MANPAGER='vim -c "%!col -b" -c "set ft=man nomod nolist nonu noma nowrap ic" -c "nmap q :q<cr>" -'
 
 # set options for less
 export LESS="-R -Mi -x4 --shift 5"

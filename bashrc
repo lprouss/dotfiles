@@ -185,6 +185,7 @@ function evince() { command evince "$@" & }
 function libreoffice() { command libreoffice "$@" & }
 function feh() { command feh "$@" & }
 #function zathura() { command zathura "$@" & } # use fork option instead
+function mupdf() { command mupdf "$@" & }
 
 # sane permissions for files and directories
 function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ; }
