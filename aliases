@@ -39,6 +39,19 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 ##----------------------------------------------------------------------------##
+## useful aliases for git
+##----------------------------------------------------------------------------##
+alias gst='git status'
+alias ga='git add'
+alias gap='git add -p'
+alias gd='git diff'
+alias grm='git rm'
+alias gmv='git mv'
+alias gc='git commit -v'
+alias gcm='git commit -v -m'
+alias gb='git branch -a'
+
+##----------------------------------------------------------------------------##
 ## other useful aliases
 ##----------------------------------------------------------------------------##
 
